@@ -1,6 +1,8 @@
 from rest_framework.routers import DefaultRouter
-from rest.api.views import ProdsApiViewSet
+from rest.api.views import ProdsApiViewSet,CoordsProdsApiViewSet
 
-router_prods = DefaultRouter()
+router = DefaultRouter()
 
-router_prods.register(prefix='rest', basename='rest', viewset=ProdsApiViewSet)
+router.register(prefix='prods', basename='prods', viewset=ProdsApiViewSet)
+
+router.register(prefix='coordsprods', basename='coordsprods', viewset=CoordsProdsApiViewSet)
